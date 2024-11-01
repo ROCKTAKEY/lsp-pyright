@@ -252,14 +252,20 @@ Current LSP WORKSPACE should be passed in."
                             (vector (concat "file://" (buffer-file-name)))))
 
 (lsp-register-custom-settings
- `((,(concat lsp-pyright-langserver-command ".disableLanguageServices") lsp-pyright-disable-language-services t)
-   (,(concat lsp-pyright-langserver-command ".disableOrganizeImports") lsp-pyright-disable-organize-imports t)
-   (,(concat lsp-pyright-langserver-command ".disableTaggedHints") lsp-pyright-disable-tagged-hints t)
-   (,(concat lsp-pyright-langserver-command ".typeCheckingMode") lsp-pyright-type-checking-mode)
+ `(("pyright.disableLanguageServices" lsp-pyright-disable-language-services t)
+   ("pyright.disableOrganizeImports" lsp-pyright-disable-organize-imports t)
+   ("pyright.disableTaggedHints" lsp-pyright-disable-tagged-hints t)
+   ("pyright.typeCheckingMode" lsp-pyright-type-checking-mode)
+
+   ("basedpyright.disableLanguageServices" lsp-pyright-disable-language-services t)
+   ("basedpyright.disableOrganizeImports" lsp-pyright-disable-organize-imports t)
+   ("basedpyright.disableTaggedHints" lsp-pyright-disable-tagged-hints t)
+   ("basedpyright.typeCheckingMode" lsp-pyright-type-checking-mode)
    ("basedpyright.analysis.inlayHints.variableTypes" lsp-pyright-basedpyright-inlay-hints-variable-types t)
    ("basedpyright.analysis.inlayHints.callArgumentNames" lsp-pyright-basedpyright-inlay-hints-call-argument-names t)
    ("basedpyright.analysis.inlayHints.functionReturnTypes" lsp-pyright-basedpyright-inlay-hints-function-return-types t)
    ("basedpyright.analysis.inlayHints.genericTypes" lsp-pyright-basedpyright-inlay-hints-generic-types t)
+
    ("python.analysis.typeCheckingMode" lsp-pyright-type-checking-mode)
    ("python.analysis.autoImportCompletions" lsp-pyright-auto-import-completions t)
    ("python.analysis.diagnosticMode" lsp-pyright-diagnostic-mode)
